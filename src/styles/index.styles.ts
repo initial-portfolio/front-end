@@ -11,9 +11,6 @@ export const Header = styled.header`
   justify-content: space-between;
   align-items: center;
   z-index: 100;
-  > nav > img {
-    cursor: pointer;
-  }
 `;
 
 export const Nav = styled.nav`
@@ -33,8 +30,27 @@ export const Link = styled.a`
   font-weight: bold;
   font-family: flamenco, serif;
   padding: 8px;
-
-  & {
-    background: rgba(240, 82, 82, 0.7);
+  background: rgba(240, 82, 82, 0.7);
+  border-radius: 6px;
+  transition: filter 0.2s;
+  
+  &:hover {
+    filter: brightness(0.6);
   }
 `;
+
+export const SectionContainer = styled.section`
+  position: relative;
+  
+  & > div {
+    position: absolute;
+    top: 40%;
+    left: 13.5%;
+    
+    > h1 {
+      font-family: Roboto;
+      font-size: 40px;
+    }
+  }
+
+`

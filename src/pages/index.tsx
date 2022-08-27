@@ -1,5 +1,4 @@
-import { Link, Header, Nav } from '../styles/index.styles';
-// @ts-ignore
+import { Link, Header, Nav, SectionContainer } from "../styles/index.styles";
 import Image from 'next/image';
 
 export const Home = () => {
@@ -15,14 +14,20 @@ export const Home = () => {
           <Link href={''}>Serviços</Link>
         </Nav>
       </Header>
-      <Image
-        alt={'image'}
-        src={'/homeImage.svg'}
-        width={3000}
-        height={1580}
-        layout="responsive"
-        objectFit="cover"
-      />
+      <SectionContainer>
+        <Image
+          alt={'image'}
+          src={'/homeImage.svg'}
+          width={3000}
+          height={1380}
+          layout="responsive"
+          objectFit="cover"
+          draggable={false}
+        />
+        <div>
+          <h1>Somos a Ganashy</h1>
+        </div>
+      </SectionContainer>
     </main>
   );
 };
