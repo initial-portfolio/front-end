@@ -11,7 +11,7 @@ export const Header = styled.header`
   align-items: center;
   z-index: 100;
   @media screen and (max-width: 900px) {
-  left: 8%
+    left: 8%;
   }
   @media screen and (max-width: 600px) {
     > nav {
@@ -19,7 +19,7 @@ export const Header = styled.header`
         margin: 0 15px 0 0;
       }
       > a {
-        display: none
+        display: none;
       }
     }
   }
@@ -36,7 +36,6 @@ export const Nav = styled.nav`
     font-size: 40px;
     font-family: flamenco, serif;
   }
-  
 `;
 
 export const Link = styled.a`
@@ -47,7 +46,7 @@ export const Link = styled.a`
   background: rgba(240, 82, 82, 0.7);
   border-radius: 6px;
   transition: filter 0.2s;
-  
+
   &:hover {
     filter: brightness(0.6);
   }
@@ -75,7 +74,7 @@ export const SectionContainer = styled.section`
     @media screen and (max-width: 900px) {
       top: 30%;
       left: 8%;
-      
+
       > h1 {
         font-size: 50px;
       }
@@ -84,5 +83,4 @@ export const SectionContainer = styled.section`
       }
     }
   }
-
-`
+`;
