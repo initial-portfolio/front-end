@@ -4,13 +4,25 @@ export const Header = styled.header`
   position: fixed;
   left: 0;
   right: 0;
-  min-width: 650px;
   max-width: 1400px;
   margin: 2rem auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
   z-index: 100;
+  @media screen and (max-width: 900px) {
+  left: 8%
+  }
+  @media screen and (max-width: 600px) {
+    > nav {
+      > div {
+        margin: 0 15px 0 0;
+      }
+      > a {
+        display: none
+      }
+    }
+  }
 `;
 
 export const Nav = styled.nav`
@@ -18,11 +30,13 @@ export const Nav = styled.nav`
   justify-content: center;
   align-items: center;
   gap: 15px;
+  cursor: pointer;
 
   > h1 {
     font-size: 40px;
     font-family: flamenco, serif;
   }
+  
 `;
 
 export const Link = styled.a`
@@ -41,15 +55,33 @@ export const Link = styled.a`
 
 export const SectionContainer = styled.section`
   position: relative;
-  
+
   & > div {
     position: absolute;
     top: 40%;
     left: 13.5%;
-    
+
     > h1 {
-      font-family: Roboto;
-      font-size: 40px;
+      font-family: Roboto, serif;
+      font-size: 48px;
+      color: #2c2d2d;
+    }
+
+    > h2 {
+      color: rgba(234, 18, 18, 0.7);
+      font-size: 25px;
+      font-weight: 400;
+    }
+    @media screen and (max-width: 900px) {
+      top: 30%;
+      left: 8%;
+      
+      > h1 {
+        font-size: 50px;
+      }
+      > h2 {
+        font-weight: 500;
+      }
     }
   }
 
