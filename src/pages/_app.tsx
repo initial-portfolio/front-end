@@ -2,8 +2,8 @@ import '../styles/globals.css';
 function MyApp({ Component, pageProps }) {
   return (
     <>
-      <title>PetPass</title>
-      <Component {...pageProps} />;
+      <title>Ganashy</title>
+      <Component {...pageProps} />
     </>
   );
 }
