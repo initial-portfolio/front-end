@@ -1,29 +1,35 @@
-import { Link, Header, Nav, SectionContainer } from "../styles/index.styles";
+import { Link, Header, Nav, SectionContainer } from '../styles/index.styles';
 import Image from 'next/image';
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
 export const Home = () => {
   const [mobile, setMobile] = useState(false);
 
   useEffect(() => {
-    if(window.innerWidth < 800){
-        setMobile(true)
+    if (window.innerWidth < 800) {
+      setMobile(true);
     }
-  }, [])
-  console.log('teste', mobile)
+  }, []);
+  console.log('teste', mobile);
   return (
     <main>
       <Header>
         <Nav>
           <h1>ganashy</h1>
-          <img src="/logo.svg" alt="logo" />
+          {/*<img src="/logo.svg" alt="logo" draggable/>*/}
         </Nav>
         <Nav>
           {mobile && (
             <div>
-            <Image width={40} height={40} src="/menu.svg" alt="menu" draggable />
+              <Image
+                width={40}
+                height={40}
+                src="/menu.svg"
+                alt="menu"
+                draggable
+              />
             </div>
-              )}
+          )}
           <Link href={''}>Sobre nós</Link>
           <Link href={''}>Serviços</Link>
         </Nav>
