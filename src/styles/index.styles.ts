@@ -10,10 +10,17 @@ export const Header = styled.header`
   justify-content: space-between;
   align-items: center;
   z-index: 100;
+
+  #menu {
+    display: none;
+  }
   @media screen and (max-width: 900px) {
     left: 8%;
   }
   @media screen and (max-width: 600px) {
+    #menu {
+      display: flex;
+    }
     > nav {
       > div {
         margin: 0 15px 0 0;
@@ -53,9 +60,12 @@ export const Link = styled.a`
 `;
 
 export const SectionContainer = styled.section`
+  #image-mobile {
+    display: none;
+  }
   position: relative;
 
-  & > div {
+  & > #text-principal {
     position: absolute;
     top: 40%;
     left: 13.5%;
@@ -74,13 +84,23 @@ export const SectionContainer = styled.section`
     @media screen and (max-width: 900px) {
       top: 30%;
       left: 8%;
-
+      > #image-desktop {
+        display: none;
+      }
       > h1 {
         font-size: 50px;
       }
       > h2 {
         font-weight: 500;
       }
+    }
+  }
+  @media screen and (max-width: 900px) {
+    > #image-desktop {
+      display: none;
+    }
+    #image-mobile {
+      display: block;
     }
   }
 `;
