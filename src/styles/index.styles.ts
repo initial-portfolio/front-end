@@ -187,19 +187,49 @@ export const SectionService = styled.section`
 `;
 
 export const SectionForm = styled.section`
-  margin-top: 3rem;
+  margin: 3rem auto 0 auto;
+  max-width: 1400px;
   display: flex;
   text-align: center;
   flex-direction: column;
   align-items: center;
+  background: rgba(27, 84, 117, 0.05);
+  padding: 2rem;
+  border-radius: 0.8rem;
 
   > h2 {
     color: #1b5475;
     font-size: 2.5rem;
+    text-align: center;
   }
 
   > form {
-    margin-top: 1rem;
+    margin-top: 2rem;
+    padding: 0 3rem;
+    width: 70%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+
+    > div:nth-last-child(-n+3), button {
+      grid-column: 1 / 3;
+    }
+    
+    > button {
+      height: 3rem;
+      border: none;
+      cursor: pointer;
+      background: rgba(234, 18, 18, 0.7);
+      border-radius: 0.4rem;
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 1.2rem;
+      transition: filter .2s ease-in-out;
+      
+      &:hover {
+        filter: brightness(0.9);
+      }
+    }
 
     > div {
       text-align: left;
@@ -207,8 +237,43 @@ export const SectionForm = styled.section`
       display: flex;
       flex-direction: column;
 
-      > input {
+      > label {
+        font-weight: 500;
+        font-size: 1.1rem;
+        color: #2f2f2f;
+      }
+
+      > input, textarea {
         margin-top: 5px;
+        height: 2.5rem;
+        border: 1px solid rgb(42, 90, 103);
+        border-radius: 0.3rem;
+        padding: 0 0.5rem;
+      }
+
+      > textarea {
+        resize: vertical;
+        padding: 0.5rem;
+      }
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    > form {
+      display: flex;
+      flex-direction: column;
+      margin-top: 1rem;
+      padding: initial;
+
+      > div {
+        text-align: left;
+        margin: 3px 0;
+        display: flex;
+        flex-direction: column;
+
+        > input {
+          margin-top: 5px;
+        }
       }
     }
   }
