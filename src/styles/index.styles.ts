@@ -211,10 +211,11 @@ export const SectionForm = styled.section`
     grid-template-columns: 1fr 1fr;
     gap: 25px;
 
-    > div:nth-last-child(-n+3), button {
+    > div:nth-last-child(-n + 3),
+    button {
       grid-column: 1 / 3;
     }
-    
+
     > button {
       height: 3rem;
       border: none;
@@ -224,8 +225,8 @@ export const SectionForm = styled.section`
       color: #ffffff;
       font-weight: 700;
       font-size: 1.2rem;
-      transition: filter .2s ease-in-out;
-      
+      transition: filter 0.2s ease-in-out;
+
       &:hover {
         filter: brightness(0.9);
       }
@@ -243,7 +244,8 @@ export const SectionForm = styled.section`
         color: #2f2f2f;
       }
 
-      > input, textarea {
+      > input,
+      textarea {
         margin-top: 5px;
         height: 2.5rem;
         border: 1px solid rgb(42, 90, 103);

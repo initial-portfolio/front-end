@@ -103,7 +103,7 @@ export const Home = () => {
           </div>
           <div>
             <label form={'email'}>Mensagem</label>
-            <textarea  />
+            <textarea />
           </div>
           <button type={'submit'}>Enviar</button>
         </form>
