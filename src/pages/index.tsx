@@ -9,14 +9,13 @@ import {
 import Image from 'next/image';
 import { useState } from 'react';
 import { Divide as Hamburger } from 'hamburger-react';
-import { Head } from 'next/document';
+import Head from 'next/head';
 
 export const Home = () => {
   const [open, setOpen] = useState(false);
   const handleOpenAndCloseMenu = () => {
     setOpen(!open);
   };
-  console.log(open);
   return (
     <>
       <Head>
