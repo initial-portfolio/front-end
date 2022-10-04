@@ -20,7 +20,7 @@ type formProps = {
 };
 
 export const Form = () => {
-  const [messageSend, setMessageSend] = useState(true);
+  const [messageSend, setMessageSend] = useState(false);
   const [data, setData] = useState<formProps>({
     name: '',
     email: '',
