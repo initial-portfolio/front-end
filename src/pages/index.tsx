@@ -7,15 +7,10 @@ import {
   SectionForm,
 } from '../styles/index.styles';
 import Image from 'next/image';
-import { useState } from 'react';
-import { Divide as Hamburger } from 'hamburger-react';
 import Head from 'next/head';
+import { Form } from '../components/Form/Form';
 
 export const Home = () => {
-  const [open, setOpen] = useState(false);
-  const handleOpenAndCloseMenu = () => {
-    setOpen(!open);
-  };
   return (
     <>
       <Head>
@@ -30,12 +25,11 @@ Oferecemos as melhores soluções de software"
         <Header>
           <Nav>
             <h1>ganashy</h1>
-            {/*<img src="/logo.svg" alt="logo" draggable/>*/}
           </Nav>
           <Nav>
-            <div id="menu">
-              <Hamburger toggled={open} toggle={handleOpenAndCloseMenu} />
-            </div>
+            {/*<div id="menu">*/}
+            {/*  <Hamburger toggled={open} toggle={handleOpenAndCloseMenu} />*/}
+            {/*</div>*/}
 
             <Link href={'#'}>Sobre nós</Link>
             <Link href={'#'}>Serviços</Link>
@@ -98,25 +92,7 @@ Oferecemos as melhores soluções de software"
         </SectionService>
         <SectionForm>
           <h2>FALE CONOSCO</h2>
-          <form>
-            <div>
-              <label id={'name'}>Nome</label>
-              <input type={'text'} placeholder="Digite seu nome" />
-            </div>
-            <div>
-              <label id={'Telefone'}>Telefone</label>
-              <input type={'text'} placeholder="Digite seu telefone" />
-            </div>
-            <div>
-              <label id={'email'}>Email</label>
-              <input type={'text'} placeholder="Digite seu melhor email" />
-            </div>
-            <div>
-              <label id={'mensagem'}>Mensagem</label>
-              <textarea placeholder="Mande sua mensagem" />
-            </div>
-            <button type={'submit'}>Enviar</button>
-          </form>
+          <Form />
         </SectionForm>
       </main>
     </>
